@@ -1,0 +1,5 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env # For environment variables/API keys
