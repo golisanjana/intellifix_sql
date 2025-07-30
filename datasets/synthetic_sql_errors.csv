@@ -1,0 +1,76 @@
+bad_sql,correct_sql
+"SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;)","SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;"
+"SELET id, name, email FROM users WHERE age > 25 ORDER BY name;","SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;"
+"SELECT id, name, email FROM users WHERE age > 25  name;","SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;"
+"SELECT id, name, email  users WHERE age > 25 ORDER BY name;","SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;"
+"SELECT id, name, email FROM users WHERE age > 25  name;","SELECT id, name, email FROM users WHERE age > 25 ORDER BY name;"
+"INSRT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);","INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);"
+"INSRT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);","INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);"
+"INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50)","INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);"
+"INSRT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);","INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);"
+"INSRT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);","INSERT INTO products (name, price, stock) VALUES ('Laptop', 1200.00, 50);"
+"UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHRE order_id = 101;","UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;"
+"UPDAT orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;","UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;"
+"UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;(","UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;"
+"UPDAT orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;","UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;"
+"UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101","UPDATE orders SET status = 'shipped', ship_date = CURRENT_DATE WHERE order_id = 101;"
+DELETE FROM customers  last_activity < '2024-01-01';,DELETE FROM customers WHERE last_activity < '2024-01-01';
+DELETE FROM customers  last_activity < '2024-01-01';,DELETE FROM customers WHERE last_activity < '2024-01-01';
+DELETE FRUM customers WHERE last_activity < '2024-01-01';,DELETE FROM customers WHERE last_activity < '2024-01-01';
+DELETE FROM customers WHERE last_activity < '2024-01-01',DELETE FROM customers WHERE last_activity < '2024-01-01';
+DELETE FROM customers WHERE last_activity < '2024-01-01';(,DELETE FROM customers WHERE last_activity < '2024-01-01';
+SELET COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;,SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;
+SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;),SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;
+SELECT COUNT(DISTINCT department) FRUM employees GROUP BY city HAVING COUNT(*) > 10;,SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;
+SELECT COUNT(DISTINCT department)  employees GROUP BY city HAVING COUNT(*) > 10;,SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;
+SELECT COUNT(DISTINCT department) FROM employees GROPU BY city HAVING COUNT(*) > 10;,SELECT COUNT(DISTINCT department) FROM employees GROUP BY city HAVING COUNT(*) > 10;
+"SELET o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';","SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';"
+"SELECT o.order_id, c.customer_name FRUM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';","SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';"
+"SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id  o.order_date = '2025-07-28';","SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';"
+"SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHRE o.order_date = '2025-07-28';","SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';"
+"SELECT o.order_id, c.customer_name FRUM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';","SELECT o.order_id, c.customer_name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_date = '2025-07-28';"
+"CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));(","CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));"
+"CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255))","CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));"
+"CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255))","CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));"
+"CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255))","CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));"
+"CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));(","CREATE TABLE temp_log (id INT PRIMARY KEY, message VARCHAR(255));"
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20),ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20),ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);),ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);(,ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20),ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+DROP TABLE old_data,DROP TABLE old_data;
+DROP TABLE old_data;(,DROP TABLE old_data;
+DROP TABLE old_data;(,DROP TABLE old_data;
+DROP TABLE old_data,DROP TABLE old_data;
+DROP TABLE old_data,DROP TABLE old_data;
+"SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales'","SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales';"
+"SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees  department = 'Sales';","SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales';"
+"SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees  department = 'Sales';","SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales';"
+"SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees  department = 'Sales';","SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales';"
+"SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FRUM employees WHERE department = 'Sales';","SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM employees WHERE department = 'Sales';"
+SELECT product_name FROM products WHRE price BETWEEN 100 AND 500;,SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;
+SELECT product_name FROM products WHERE price BETWEEN 100 AND 500,SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;
+SELET product_name FROM products WHERE price BETWEEN 100 AND 500;,SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;
+SELECT product_name FROM products WHRE price BETWEEN 100 AND 500;,SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;
+SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;),SELECT product_name FROM products WHERE price BETWEEN 100 AND 500;
+"SELECT employee_id, first_name, last_name FROM employees WHRE employee_id IN (1, 5, 9);","SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9);"
+"SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9)","SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9);"
+"SELECT employee_id, first_name, last_name  employees WHERE employee_id IN (1, 5, 9);","SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9);"
+"SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9)","SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9);"
+"SELECT employee_id, first_name, last_name  employees WHERE employee_id IN (1, 5, 9);","SELECT employee_id, first_name, last_name FROM employees WHERE employee_id IN (1, 5, 9);"
+SELECT * FRUM inventory ORDER BY quantity DESC LIMIT 10;,SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;
+SELECT *  inventory ORDER BY quantity DESC LIMIT 10;,SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;
+SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;),SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;
+SELECT *  inventory ORDER BY quantity DESC LIMIT 10;,SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;
+SELECT * FRUM inventory ORDER BY quantity DESC LIMIT 10;,SELECT * FROM inventory ORDER BY quantity DESC LIMIT 10;
+SELET AVG(rating) FROM reviews WHERE product_id = 789;,SELECT AVG(rating) FROM reviews WHERE product_id = 789;
+SELECT AVG(rating) FRUM reviews WHERE product_id = 789;,SELECT AVG(rating) FROM reviews WHERE product_id = 789;
+SELECT AVG(rating) FROM reviews WHERE product_id = 789;),SELECT AVG(rating) FROM reviews WHERE product_id = 789;
+SELET AVG(rating) FROM reviews WHERE product_id = 789;,SELECT AVG(rating) FROM reviews WHERE product_id = 789;
+SELECT AVG(rating)  reviews WHERE product_id = 789;,SELECT AVG(rating) FROM reviews WHERE product_id = 789;
+CREATE INDEX idx_customer_email ON customers (email),CREATE INDEX idx_customer_email ON customers (email);
+CREATE INDEX idx_customer_email ON customers (email);(,CREATE INDEX idx_customer_email ON customers (email);
+CREATE INDEX idx_customer_email ON customers (email),CREATE INDEX idx_customer_email ON customers (email);
+CREATE INDEX idx_customer_email ON customers (email),CREATE INDEX idx_customer_email ON customers (email);
+CREATE INDEX idx_customer_email ON customers (email);(,CREATE INDEX idx_customer_email ON customers (email);
